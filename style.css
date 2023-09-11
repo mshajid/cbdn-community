@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Color Pallets 
+   Link: https://colorhunt.co/palette/faf1e4cedebd9eb384435334
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 80vh;
+    background-color: rgb(250, 241, 228);
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 20px auto auto auto;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; 
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 4;
+}
+.logo h3 {
+    padding: 5px 20px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.logo {
+    background-color:  rgb(67, 83, 52);
+    margin-right: 20px;
+    /* border-top-right-radius: 20px;
+    border-top-left-radius: 20px; */
+}
+
+.nav-btns-cntr {
+    display: flex;
+    align-items: center;
+    background-color: rgb(67, 83, 52);
+    border-radius: 15px;
+}
+
+.nav-btns {
+    padding: 5px 10px;
+    margin: 10px 30px;
+    border-radius: 5px;
+    background-color: rgb(67, 83, 52);
+    border: none;
+    outline: none;
+}
+
+/* Anchor Tag Styles */
+
+.nav-btns-cntr a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.divider {
+    opacity: 0.1;
+    color: white;
+}
+
+/* Navigation Button Hover state */
+
+.nav-btns > a:hover {
+    background-color: rgb(250, 241, 228);
+    color: black;
+    transition: all .3s ease-in;
+}
+
+
+/* Below code is working but padding breaks the navigation bar - This code deployed by Khaja Sharif */
+
+/* .nav-btns:hover {
+    padding: 5px 15px;
+    background-color: rgb(250, 241, 228);
+}
+
+.nav-btns:hover > a {
+    color: black;
+} */
+
+
+
+/* .main-hero {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    gap: 20px;
+    /* background-color: rgb(67, 83, 52); 
+} */
+
+/* .main-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+} */
+
+.main-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin-top: -50px;
+    /* max-width: 1500px;
+    margin: 0 auto; */
+}
+
+.right {
+    max-width: 500px;
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 90px;
+    margin-left: 300px;
+    margin-right: -100px;
+    /* overflow: hidden; */
+}
+
+.right-header {
+    font-size: 3.0rem;
+    line-height: 1.1;    
+}
+
+.right-desc {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.right-desc span {
+    font-weight: 900;
+}
+
+.user-ratings {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 15px;
+}
+
+.views {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.views-count {
+    background-color: rgb(249,47,96);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 2px 10px;
+}
+
+.views-desc {
+    font-weight: 300;
+    color: grey;
+}
+
+.cta {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.cta a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+.cta li {
+    list-style: none;
+}
+
+.cta a::after {
+    content: '';
+    position: absolute;
+    margin-bottom: -5px;
+    width: 55%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(249,47,96);
+    transform-origin: bottom right;
+    transition: transform 0.7s ease-out;
+}
+
+.cta a:hover::after {
+    transform: scaleX(1);
+    transform: bottom right;
+    height: 2px;
+    margin-bottom: -5px;
+    opacity: 0.5;
+}
+
+.join-cta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.today {
+    font-size: 1.1rem;
+}
+
+.fa-arrow-turn-down {
+    font-size: 40px;
+    margin-top: 30px;
+    /* text-align: center; */
+}
+
+.left {
+    padding: 50px;
+    margin-right: 100px;
+}
+
+.video-hero {
+    background-color: rgb(206, 222, 189);
+    height: 80vh;
+}
+
+.video-intro {
+    display: flex;
+    justify-content: center;
+}
+
+.video-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    flex-direction: column;
+}
+
+.video-intro h2 {
+    /* margin: 120px 0px -10px 0px; */
+    font-size: 2.2rem;
+}
+
+.video-intro h4 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.live-session {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 120px 0px -10px 0px;
+}
+
+.live-session .fa-youtube {
+    font-size: 2.2rem;
+}
+
+.live-session .fa-youtube:hover {
+    color: red;
+}
+
+.video-main-desc {
+    border: 3px dotted rgba(67, 83, 52, 0.55);
+    border-radius: 20px;
+    background-color: rgba(250, 241, 228, 0.35);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.video-main-desc p {
+    max-width: 500px;
+    text-align: center;
+    color: black;
+}
+
+.related-section {
+    margin: 20px 0;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.related-btns-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background-color: red; */
+    /* background-color: black; */
+    border-radius: 20px;
+    background-color: rgba(67, 83, 52, .3);
+    padding: 10px;
+}
+
+.related-btns {
+    
+    cursor: pointer;
+    border-radius: 20px;
+    color: black;
+    padding: 5px 10px; 
+    background-color: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .5);
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+
+.related-btns a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+.related-btns:hover {
+    background-color: rgb(67, 83, 52);
+    transition: all .3s ease-in;
+}
+
+.cards-section {
+    display: flex;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cards {
+    border: 1px solid rgba(255, 255, 255, .9);
+    background-color: rgba(67, 83, 52, .3);
+    width: 300px;
+    /* height: 400px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.card-img {
+    width: 300px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.card-title {
+    text-align: center;
+    max-width: 300px;
+    margin-bottom: 5px;
+}
+
+.card-title h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+.card-tags-section  {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.for-html {
+    text-decoration: none;
+    color: white;
+    font-size: .7rem;
+    background-color: rgba(221,75,37,.5);
+    border: 1px solid rgba(255, 255, 255, .5);
+    padding: 1px 8px;
+    border-radius: 20px;
+}
+
+.for-html:hover {
+    background-color: rgba(221,75,37,.9);
+}
+
+.for-css {
+    text-decoration: none;
+    color: white;
+    font-size: .7rem;
+    background-color: rgba(37,75,221, .5);
+    border: 1px solid rgba(255, 255, 255, .5);
+    padding: 1px 8px;
+    border-radius: 20px;
+}
+
+.for-css:hover {
+    background-color: rgba(37,75,221,1);
+}
+
+.for-git {
+    text-decoration: none;
+    color: white;
+    font-size: .7rem;
+    background-color: rgba(232,78,49,.5);
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 1px 8px;
+    border-radius: 20px;
+}
+
+.for-git:hover {
+    background-color: rgba(232,78,49,.9);
+}
+
+.for-github {
+    text-decoration: none;
+    color: white;
+    font-size: .7rem;
+    background-color: rgba(51,51,51,.5);
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 1px 8px;
+    border-radius: 20px;
+}
+
+.for-github:hover {
+    background-color: rgba(51,51,51,1)
+}
+
+.card-cta-container {
+    padding: 5px 10px;
+    background-color: rgba(67, 83, 52, .2);
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.card-cta-container:hover {
+    background-color: rgba(67, 83, 52, .9);
+    transition: all .3s ease-in;
+}
+
+.card-cta-container a {
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.fa-square-up-right {
+    font-size: .7rem;
+}
+
+.card-content-desc {
+    padding: 0px 10px;
+}
+
+.card-content-desc p {
+    font-size: .95rem;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.connect {
+    display: flex;
+    justify-content: center;
+    height: 1200px;
+    align-items: center;
+    background-color: rgb(206, 222, 189);
+    padding: 45px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(67, 83, 52);
+    color: white;
+    padding: 20px;
+    position: relative;
+    /* margin: 100px;s    */
+}
+
+.footer-bg {
+    position: absolute;
+    background-color: rgb(67, 83, 52);
+    width: 100%;
+    height: 120px;
+    top: -40px;
+    z-index: -2;
+}
+
+.footer-cntr {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.yt-logo {
+    margin-bottom: 5px;
+}
+
+.fa-youtube:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.footer-header h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 1;
+    gap: 2px;
+}
+
+.footer-links p {
+    font-size: .9rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    padding: 2px;
+}
+
+.footer-links p:hover {
+    background-color: rgb(206, 222, 189);
+    color: black;
+    transition: all .5s ease-in-out;
+    font-weight: 500;
+}
+
+.seaprator {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.new-sep {
+    position: absolute;
+    background-color: rgb(67, 83, 52);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-sep span {
+    color: white;
+    font-weight: 200;
+    font-size: .8rem;
+    
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(206, 222, 189);
+    text-align: center;
+}
